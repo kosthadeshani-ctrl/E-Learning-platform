@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple e-Library</title>
+  <link rel="stylesheet" href="elibstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+   <!-- Header -->
+  <header class="header">
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text-group">
+            <span class="logo-text">FUTURELERN</span><span class="logo-domain">.LK</span>
+          </div>
+        </div>
+        <div class="auth-buttons">
+          <a href="register.html" class="auth-btn register-btn">
+            <i class="fas fa-user-plus"></i>
+            <span>Register</span>
+          </a>
+          <a href="login.html" class="auth-btn login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link  "><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="Courses.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+          
+          <li><a href="event.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+          <li><a href="free.html" class="nav-link"><i class="fas fa-gift"></i> Free</a></li>
+          <li><a href="experts.html" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> Experts</a></li>
+          <li><a href="becometeach.html" class="nav-link"><i class="fas fa-user-tie"></i> Become a Teacher</a></li>
+          <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="elibrary.html" class="nav-link active"><i class="fas fa-book-reader"></i> E-Library</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+ <br><br><br><br><br><br>
+  <div class="library-container">
+    <h1> e-Library</h1>
+
+    <div class="book-list" id="bookList">
+      <!-- Books will be inserted here -->
+    </div>
+
+    <div class="details" id="bookDetails">
+      <h2 id="detailTitle"></h2>
+      <p id="detailAuthor"></p>
+      <p id="detailDescription"></p>
+      <img id="detailImage" src="" alt="Book cover">
+    </div>
+  </div>
+  <br><br><br><br>
+  
+  <!--footer-->
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="logo-text-group">
+            <span class="logo-text">FUTURELERN</span><span class="logo-domain">.LK</span>
+          </div>
+        </div>
+        <p class="footer-description">
+          Empowering Sri Lankan learners with world-class education and cutting-edge skills for the digital future.
+        </p>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <label>Email</label>
+              <p>future@learn.lk</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <label>Phone</label>
+              <p>075 6 700 700</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <label>WhatsApp</label>
+              <p>075 954 1398</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="footer-middle">
+        <p><i class="fas fa-map-marker-alt"></i> Address: 102/03, Campus Road,<br>Raththanapitiya, Boralesgamuwa, 10250</p>
+      </div>
+
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Become an Instructor</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Who we are</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FUTURELERN.lk. All rights reserved.</p>
+      <div class="footer-policy">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of the service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

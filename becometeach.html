@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Become a Teacher - FUTURELERN.LK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --orange-gradient: linear-gradient(135deg, #ff6a00, #ff9900);
+      --orange: #ff6a00;
+      --orange-hover: #ff7f2a;
+      --white: #ffffff;
+      --light-gray: #cccccc;
+      --dark-bg: #121212;
+      --card-bg: #1e1e1e;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--white);
+    }
+
+    .header, .footer {
+      background-color: #000;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo-icon {
+      background: var(--orange-gradient);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 18px;
+    }
+
+    .logo-domain {
+      background: var(--orange-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .auth-buttons a {
+      margin-left: 15px;
+      padding: 8px 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .register-btn {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .register-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .login-btn {
+      background: var(--orange-gradient);
+      color: white;
+      border: none;
+    }
+
+    .login-btn:hover {
+      background: var(--orange-hover);
+    }
+
+    nav.main-nav {
+      background: #111;
+      padding: 10px 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background: var(--orange-gradient);
+    }
+
+    main {
+      margin-top: 140px;
+      padding: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .teacher-heading {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .teacher-content {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .teacher-content p {
+      font-size: 16px;
+      color: var(--light-gray);
+      line-height: 1.8;
+    }
+
+    .teacher-benefits {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .teacher-benefits li {
+      margin-bottom: 10px;
+    }
+
+    .teacher-form {
+      margin-top: 40px;
+    }
+
+    .teacher-form input,
+    .teacher-form textarea,
+    .teacher-form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .teacher-form input,
+    .teacher-form textarea {
+      background-color: #2c2c2c;
+      color: white;
+    }
+
+    .teacher-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .teacher-form button {
+      background: var(--orange-gradient);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .teacher-form button:hover {
+      background: var(--orange-hover);
+    }
+
+    /* Footer (reuse footer from About page) */
+    .footer {
+      background-color: #181818;
+      color: #fff;
+      padding: 60px 20px 30px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+      flex: 1 1 300px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .footer-description {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .footer-contact .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .footer-contact .icon {
+      background: #2d2d2d;
+      color: #ff6a00;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+    }
+
+    .footer-contact label {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .footer-contact p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .footer-middle p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-social a {
+      background-color: #0b0b0b;
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      border-top: 1px solid #585757;
+      padding-top: 15px;
+      font-size: 13px;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-policy a {
+      color: red;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="top-bar">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <span class="logo-text">FUTURELERN<span class="logo-domain">.LK</span></span>
+    </div>
+    <div class="auth-buttons">
+      <a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i>Register</a>
+      <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i>Login</a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="Courses.html" class="nav-link"><i class="fas fa-graduation-cap"></i>Courses</a></li>
+      
+      <li><a href="event.html" class="nav-link"><i class="fas fa-calendar-alt"></i>Events</a></li>
+      <li><a href="free.html" class="nav-link"><i class="fas fa-gift"></i>Free</a></li>
+      <li><a href="experts.html" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> Experts</a></li>
+      <li><a href="becometeach.html" class="nav-link active"><i class="fas fa-user-tie"></i>Become a Teacher</a></li>
+      <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i>About Us</a></li>
+      <li><a href="elibrary.html" class="nav-link"><i class="fas fa-book-reader"></i>E-Library</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Section -->
+<main>
+  <h2 class="teacher-heading">Become a Teacher at FUTURELERN.LK</h2>
+  <section class="teacher-content">
+    <p>We welcome skilled professionals, industry experts, and passionate educators to join our platform and share their knowledge with thousands of learners across Sri Lanka. Whether you're an IT expert, language coach, designer, or university lecturer — FUTURELERN.LK provides the tools and audience for you to teach online, your way.</p>
+
+    <h3>Benefits:</h3>
+    <ul class="teacher-benefits">
+      <li>🎓 Teach from anywhere at your convenience</li>
+      <li>💼 Build your personal teaching brand</li>
+      <li>📈 Earn money for every enrolled student</li>
+      <li>📚 Access to content creation support</li>
+    </ul>
+
+    <form class="teacher-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="expertise" placeholder="Subject Expertise" required />
+      <textarea name="message" placeholder="Tell us about your teaching experience..." required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+        <span class="logo-text">FUTURELERN<span class="logo-domain">.LK</span></span>
+      </div>
+      <p class="footer-description">Empowering Sri Lankan learners with world-class education and digital skills for the future.</p>
+      <div class="footer-contact">
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div><label>Email</label><p>future@learn.lk</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div><label>Phone</label><p>075 6 700 700</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fab fa-whatsapp"></i></div>
+          <div><label>WhatsApp</label><p>075 954 1398</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-middle">
+      <p><i class="fas fa-map-marker-alt"></i> 102/03 Campus Road, Raththanapitiya, Boralesgamuwa, 10250</p>
+    </div>
+    <div class="footer-right">
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Become an Instructor</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Who we are</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 FUTURELERN.lk. All rights reserved.</p>
+    <div class="footer-policy">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
